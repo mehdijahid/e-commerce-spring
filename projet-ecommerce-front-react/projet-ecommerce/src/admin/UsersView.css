@@ -1,0 +1,303 @@
+/* ═══════════════════════════════════════════════════
+   UsersView - Admin user management styles
+   ═══════════════════════════════════════════════════ */
+
+.users-view {
+  max-width: 1100px;
+  animation: usersFadeIn 0.4s ease;
+}
+
+@keyframes usersFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.users-header {
+  margin-bottom: 1.5rem;
+}
+
+.users-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.users-stats-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.users-stat-chip {
+  padding: 0.3rem 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: #f1f5f9;
+  border-radius: 999px;
+}
+
+.users-stat-chip-admin {
+  color: #7c3aed;
+  background: #f5f3ff;
+}
+
+.users-stat-chip-active {
+  color: #16a34a;
+  background: #dcfce7;
+}
+
+/* ── Search ── */
+.users-search-wrap {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.users-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.users-search {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background: var(--color-card);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.15s ease;
+}
+
+.users-search:focus {
+  border-color: var(--color-primary);
+}
+
+.users-search::placeholder {
+  color: #94a3b8;
+}
+
+/* ── Status ── */
+.users-status {
+  color: var(--color-text-secondary);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.users-status-error {
+  color: var(--color-error);
+}
+
+/* ── Table ── */
+.users-table-wrap {
+  background: var(--color-card);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table thead {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.users-table th {
+  padding: 0.875rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  text-align: left;
+}
+
+.users-table td {
+  padding: 0.875rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.users-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.users-row-inactive {
+  opacity: 0.6;
+}
+
+.users-empty {
+  text-align: center;
+  padding: 3rem 1rem !important;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem !important;
+}
+
+/* ── Name cell ── */
+.users-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.users-avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: 10px;
+}
+
+.users-name {
+  font-weight: 600;
+}
+
+.users-email {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ── Role select ── */
+.users-role-select {
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.users-role-select:focus {
+  border-color: var(--color-primary);
+}
+
+.users-role-admin {
+  color: #7c3aed;
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+}
+
+.users-role-user {
+  color: #4f46e5;
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+/* ── Badge ── */
+.users-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.users-badge-active {
+  color: #16a34a;
+  background: #dcfce7;
+}
+
+.users-badge-inactive {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+/* ── Toggle button ── */
+.users-toggle-btn {
+  padding: 0.375rem 0.875rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.users-toggle-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.users-toggle-deactivate {
+  color: var(--color-error);
+  background: #fff;
+  border-color: #fecaca;
+}
+
+.users-toggle-deactivate:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
+.users-toggle-activate {
+  color: #16a34a;
+  background: #fff;
+  border-color: #bbf7d0;
+}
+
+.users-toggle-activate:hover:not(:disabled) {
+  background: #f0fdf4;
+}
+
+.users-action-btns {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.users-delete-btn {
+  color: var(--color-error) !important;
+  background: #fff !important;
+  border-color: #fecaca !important;
+}
+
+.users-delete-btn:hover:not(:disabled) {
+  background: #fef2f2 !important;
+}
+
+/* ── Notice ── */
+.users-notice {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .users-table-wrap {
+    overflow-x: auto;
+  }
+
+  .users-table {
+    min-width: 600px;
+  }
+}

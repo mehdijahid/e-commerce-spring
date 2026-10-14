@@ -1,0 +1,62 @@
+.account {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.account-back {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  box-shadow: var(--shadow-input);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.account-back:hover {
+  background: #eef2ff;
+}
+
+.account-card {
+  padding: 2.5rem;
+  background: var(--color-card);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.account-card h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.account-subtitle {
+  margin-top: 0.375rem;
+  margin-bottom: 1.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.account-notice {
+  margin-bottom: 1rem;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #16a34a;
+  background: rgba(22, 163, 74, 0.08);
+  border-radius: var(--radius);
+}
+
+@media (max-width: 640px) {
+  .account-card {
+    padding: 1.5rem;
+  }
+}
